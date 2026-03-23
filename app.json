@@ -1,0 +1,79 @@
+{
+  "expo": {
+    "name": "spakspak",
+    "slug": "spakspak",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/logoImg.jpeg",
+    "scheme": "reelapp",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.Indaitechnologies.spakspak",
+      "buildNumber": "3",
+      "associatedDomains": [
+        "applinks:api.spakspak.com"
+      ]
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/logoImg.jpeg",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.Indaitechnologies.spakspak",
+      "permissions": [
+        "android.permission.RECORD_AUDIO"
+      ],
+      "versionCode": 8,
+      "useNextNotificationsApi": true,
+      "intentFilters": [
+        {
+          "action": "VIEW",
+          "category": [
+            "BROWSABLE",
+            "DEFAULT"
+          ],
+          "data": [
+            {
+              "scheme": "https",
+              "host": "api.spakspak.com",
+              "pathPrefix": "/share/reel"
+            }
+          ]
+        }
+      ]
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "static",
+      "favicon": "./assets/images/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/images/logoImg.jpeg",
+          "imageWidth": 200,
+          "resizeMode": "contain",
+          "backgroundColor": "#ffffff"
+        }
+      ],
+      "expo-video",
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Allow $(PRODUCT_NAME) to access your photos so you can update your profile picture.",
+          "cameraPermission": "Allow $(PRODUCT_NAME) to access the camera so you can take a new profile picture.",
+          "microphonePermission": "Allow $(PRODUCT_NAME) to access the microphone while recording video."
+        }
+      ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "54ca5092-1949-4860-bd50-ce36f969dc04"
+      },
+      "EXPO_PUBLIC_API_URL": "https://api.spakspak.com/api/v1"
+    }
+  }
+}
